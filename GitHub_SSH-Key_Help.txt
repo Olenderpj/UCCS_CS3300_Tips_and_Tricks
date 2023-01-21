@@ -1,0 +1,43 @@
+
+Getting Started with Github SSH Key Generation
+**********************************************
+
+This guide will walk you through the steps to generate an SSH key so that you will seamlessly be able to push and pull your code to and from GitHub.
+
+!!! You will need a Github account if you don't have one already. You can sign up here: https://github.com/join
+
+1. From the menu in the upper-left hand corner, open up a new terminal window.
+
+2. Copy and paste the following command into the terminal and substitute the email address you used to sign up with your github account.
+	ssh-keygen -t ed25519 -C "your_email@example.com"
+
+3. You will be prompted to enter a file for where to save the key, press enter to pass over and use the default configuration.
+
+4. You will also be prompted for a passphrase, press enter and don't use a password for this step.
+
+5. When asked to re-enter a passphrase, simply press enter again to pass over this.
+
+6. You will need the SSH key that was generated, to view it/ print it to the terminal, paste the following command into the terminal.
+	cat /root/.ssh/id_ed25519.pub
+
+7. Copy the full string that was printed out (starting at ssh-ed25519 and ending with your email) and navigate to https://github.com
+
+8. In the upper right corner of the screen, click on your profile icon.
+
+9. From the menu, select "Settings"
+
+10. From the next menu on the left click on "SSH and GPG keys"
+
+11. Click on the green button that says "New SSH key" in the upper right corner.
+
+12. Give the new key the title of "CS3300 Docker Container"
+
+13. Make sure the Key type is set to "Authentication Key" from the dropdown menu
+
+14. Past your key into the "key" box.
+
+15. Click "Add SSH key"
+
+16. You may be prompted to sign-in again, if so, sign in again.
+
+17. Congratulations! You've successfully set up a new SSH Key!
